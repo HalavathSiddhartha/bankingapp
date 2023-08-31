@@ -39,16 +39,25 @@ public class AccountController {
 	// -------------------------------Close
 	// Account--------------------------------------
 	@RequestMapping("/closeAccount")
-	public String closeAccount(@RequestParam("accountNumber") int acc) {
-		int rs = transdao.closeAccount(acc);
+	public String closeAccount(@RequestParam("accountNumber") int acc, Model m) {
+		int rs = 0;
+		int balance = transdao.checkBalance(acc);
+		if (balance > 0) {
+			m.addAttribute("message", "Action Cannot be performed");
+			balance = transdao.checkBalance(acc);
+			m.addAttribute("balance", balance);
+			return "customerDashboard";
 
-		if (rs == 1) {
+		}
+		else if (balance == 0) {
+			m.addAttribute("message", "Your Account Has Been Closed");
+			rs = transdao.closeAccount(acc);
 
 			return "customerLogin";
-		} else {
 
-			return "customerDashboard";
 		}
+
+		return "customerDashboard";
 
 	}
 
