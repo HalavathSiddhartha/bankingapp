@@ -1,0 +1,231 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+	box-sizing: border-box;
+	--darkBlue: hsl(233, 26%, 24%);
+	--limeGreen: hsl(136, 65%, 51%);
+	--brightCyan: hsl(192, 70%, 51%);
+	--grayishBlue: hsl(233, 8%, 62%);
+	--lightGrayishBlue: hsl(220, 16%, 96%);
+	--veryLightGray: hsl(0, 0%, 98%);
+	--white: hsl(0, 0%, 100%);
+}
+
+body {
+	margin: 0;
+	font-size: 18px;
+	font-family: "Public Sans", "Helvetica";
+	background: var(--veryLightGray);
+}
+
+.header {
+	background: white;
+	box-shadow: 0px 5px 0px var(--veryLightGray);
+}
+
+.topHeader {
+	background: var(--white);
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.navigation ul,
+.mobileNav ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.navLink {
+	font-size: 14px;
+	display: inline-block;
+	padding: 22px 15px;
+	text-decoration: none;
+	color: var(--grayishBlue);
+	border-bottom: 5px solid var(--white);
+}
+
+/* .navLink.active {
+    border-bottom: 5px solid var(--limeGreen);
+    padding: 22px 15px;
+    color: black;
+} */
+
+.navLink:hover:not(.active) {
+	color: black;
+	border-bottom: 5px solid var(--limeGreen);
+	padding: 22px 15px;
+}
+
+#requestBtn {
+	background: var(--limeGreen);
+	/* background: -webkit-linear-gradient(left, var(--limeGreen), var(--brightCyan));
+    background: -o-linear-gradient(right, var(--limeGreen), var(--brightCyan));
+    background: -moz-linear-gradient(right, var(--limeGreen), var(--brightCyan));
+    background: linear-gradient(to right, var(--limeGreen), var(--brightCyan)); */
+	padding: 15px 25px;
+	border-radius: 25px;
+	color: var(--white);
+	font-size: 14px;
+	border: none;
+	transition: opacity 0.8s, 0.5s;
+}
+
+#requestBtn:focus {
+	outline: none;
+}
+
+#requestBtn:hover {
+	opacity: 0.6;
+}
+
+.navToggler {
+	display: none;
+}
+
+.mobileNav {
+	display: none;
+}
+
+.digitalBanking {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	flex: 1;
+	width: 100%;
+	height: 650px;
+	background: var(--veryLightGray);
+}
+
+.dgtBankInfo {
+	font-family: 'Poppins', sans-serif;
+	margin: auto 5% auto 10%;
+	width: 35%;
+}
+
+.dgtBankInfo h1,
+.chooseEbank h1 {
+	font-size: 20px;
+	position: relative;
+	top: -50px;
+	font-weight: bold;
+	color: var(--darkBlue);
+}
+
+.text-muted {
+	color: var(--grayishBlue);
+	position: relative;
+	top: -60px;
+	line-height: 30px;
+	font-size: 16px;
+	font-weight: lighter;
+}
+
+.dgtBankInfo #requestBtn {
+	margin: 25px 0;
+}
+
+.dgtBankImg {
+	background: url("/welcome/bg-intro-desktop.svg");
+	background-position: 7% 75%;
+	width: 50%;
+	height: 650px;
+}
+
+.dgtBankImg img {
+	width: 100%;
+	height: 661px;
+	overflow: auto !important;
+	object-position: 30% -10px;
+	object-fit: cover;
+}
+
+.chooseEbank {
+	padding: 5% 10%;
+	background: var(--lightGrayishBlue);
+}
+
+
+
+.easyBank {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 5% 0;
+}
+
+.easyBank h1 {
+	font-size: 24px;
+	margin: 40px 0;
+	color: var(--darkBlue);
+}
+
+.easyBank div {
+	width: 23%;
+}
+
+
+
+.footer {
+	padding: 5% 7%;
+	background: #6a976c54;
+
+}
+
+
+
+.footerList {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	align-content: center;
+	justify-content: space-between;
+	width: 100%;
+}
+
+
+.footerDiv {
+	/* align-self: stretch; */
+	display: flex;
+	/* flex-flow: row nowrap; */
+	justify-content: center;
+	align-items: center;
+}
+
+
+
+
+
+#link:hover {
+	fill: var(--limeGreen);
+}
+
+.footerDiv:last-child {
+	align-items: flex-end;
+	width: 40%;
+}
+
+.footerDiv:last-child p {
+	margin: 15px 0 0 0;
+	font-size: 14px;
+	color: black;
+}
+
+.footerDiv:last-child a {
+	display: inline-block;
+}
+
+.footerDiv svg:first-child {
+	margin: 0 10px 0px 10px;
+}
