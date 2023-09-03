@@ -46,7 +46,7 @@ public class AccountController {
 		int rs = 0;
 		int balance = transdao.checkBalance(acc);
 		if (balance > 0) {
-			m.addAttribute("message", "Action Cannot be performed");
+			m.addAttribute("message", "Action Cannot be performed untill balance is withdrawn");
 			balance = transdao.checkBalance(acc);
 			m.addAttribute("balance", balance);
 			return "customerDashboard";
