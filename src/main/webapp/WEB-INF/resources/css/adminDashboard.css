@@ -20,7 +20,7 @@ body {
     background-color: #fff;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    height: 267px;
+    height: 60vh;
 }
 
 .dashboard-title {
@@ -30,11 +30,12 @@ body {
 }
 
 .menu {
-	display: flex;
-	justify-content: center;
-	margin: 0;
-	padding: 0;
-	list-style: none;
+	    display: flex;
+    justify-content: center;
+    margin-top: 88px;
+    padding-top: 55px;
+    list-style: none;
+    align-items: center;
 }
 
 .menu-item {
