@@ -56,17 +56,7 @@
 			</div>
 		</div>
 
-		<nav class="mobileNav">
-			<div class="wrapper">
-				<ul>
-					<li><a class="nlink" href="#">Home</a></li>
-					<li><a class="nlink" href="about">About</a></li>
-					<li><a class="nlink" href="adminLogin">Login</a></li>
-
-				</ul>
-			</div>
-		</nav>
-
+		
 		<div class="digitalBanking">
 			<div class="dgtBankInfo">
 				<h1>The Nagaland Bank Welcomes You !</h1>

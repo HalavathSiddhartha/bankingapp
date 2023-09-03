@@ -1,87 +1,12 @@
-<%@page isELIgnored = "false" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@page isELIgnored="false"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
 <title>Admin Dashboard - Bank Account Management</title>
-<style>
-body {
-	font-family: Arial, sans-serif;
-	margin: 0;
-	padding: 0;
-	background-color: #f8f9fa;
-}
-
-#header {
-	background-color: #343a40;
-	color: #fff;
-	text-align: center;
-	padding: 10px;
-}
-
-#container {
-	max-width: 1200px;
-	margin: 20px auto;
-	background-color: #fff;
-	padding: 20px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.dashboard-title {
-	font-size: 32px;
-	font-weight: bold;
-	margin-bottom: 20px;
-}
-
-.menu {
-	display: flex;
-	justify-content: center;
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-
-.menu-item {
-	margin: 0 15px;
-}
-
-.menu-link {
-	text-decoration: none;
-	color: #333;
-	font-weight: bold;
-	transition: color 0.3s;
-}
-
-.menu-link:hover {
-	color: #0066cc;
-}
-
-.section {
-	margin-top: 40px;
-	padding: 20px;
-	background-color: #f5f5f5;
-	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.card {
-	padding: 20px;
-	margin-bottom: 20px;
-	background-color: #fff;
-	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.card-title {
-	font-size: 24px;
-	font-weight: bold;
-	margin-bottom: 10px;
-}
-
-@media screen and (max-width: 768px) {
-	.menu {
-		flex-direction: column;
-		align-items: center;
-	}
-}
-</style>
+<link href="<c:url value="/resources/css/adminDashboard.css" />" rel="stylesheet">
 </head>
 <body>
 	<div id="header">

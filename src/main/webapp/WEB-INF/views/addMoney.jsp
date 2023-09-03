@@ -2,6 +2,7 @@
 <%@page import="bankingapp.entity.Customer"%>
 <%@page import="bankingapp.entity.Cust_detail"%>
 <%@ page isELIgnored="false"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
 <title>Add Account</title>
@@ -10,45 +11,7 @@
 	rel="stylesheet"
 	integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
 	crossorigin="anonymous">
-<style>
-body {
-	background-color: #f8f9fa;
-}
-
-.container {
-	max-width: 50rem;
-	margin-top: 30px;
-	padding: 20px;
-	background-color: #ffffff;
-	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-	border-radius: 10px;
-}
-
-h3 {
-	font-size: 24px;
-	margin-bottom: 20px;
-}
-
-.form-label {
-	font-weight: bold;
-}
-
-.form-control {
-	border: 1px solid #ced4da;
-	border-radius: 5px;
-	padding: 8px;
-}
-
-.btn-primary {
-	background-color: #007bff;
-	border-color: #007bff;
-}
-
-.btn-primary:hover {
-	background-color: #0056b3;
-	border-color: #0056b3;
-}
-</style>
+<link href="<c:url value="/resources/css/transaction.css" />" rel="stylesheet">
 </head>
 <body>
 

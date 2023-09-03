@@ -30,15 +30,13 @@
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 						<li class="nav-item"><a class="nav-link active"
 							aria-current="page" href="/bankingapp">Home</a></li>
-						<!-- <li class="nav-item">
-          <a class="nav-link" href="about">About</a>
-        </li> -->
+		
 						<li class="nav-item dropdown"><a
 							class="nav-link dropdown-toggle" href="#" role="button"
 							data-bs-toggle="dropdown" aria-expanded="false"> Login </a>
 							<ul class="dropdown-menu">
 
-								<!--  <li><a class="dropdown-item" href="customerLogin">Customer</a></li> -->
+								
 								<li><a class="dropdown-item" href="adminLoginPage">
 										Admin</a></li>
 								<li><hr class="dropdown-divider"></li>
@@ -73,6 +71,8 @@
 			</div>
 		</form>
 	</div>
+	
+	
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"

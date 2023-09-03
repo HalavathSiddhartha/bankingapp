@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+
 <%@ page isELIgnored="false"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,52 +14,7 @@
 	rel="stylesheet"
 	integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
 	crossorigin="anonymous">
-<style>
-body {
-	background-color: #f8f9fa;
-}
-
-.container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	flex-direction: column;
-	align-items: center;
-	height: 100vh;
-}
-
-.form-container {
-	background-color: #ffffff;
-	border-radius: 5px;
-	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-	padding: 30px;
-	width: 400px;
-}
-
-.form-group label {
-	font-weight: bold;
-}
-
-.btn-danger {
-	background-color: purple;
-	color: white;
-	border-color: white;
-	width: 50%;
-	border-radius: 5px;
-}
-
-.btn-danger:hover {
-	background-color: #0056b3;
-	border-color: #bd2130;
-}
-
-.error-message {
-	color: #dc3545;
-	font-weight: bold;
-	margin-top: 10px;
-}
-</style>
+<link href="<c:url value="/resources/css/deleteAccount.css" />" rel="stylesheet">
 </head>
 <body>
 
@@ -77,17 +35,8 @@ body {
 						<li class="nav-item"><a class="nav-link active"
 							aria-current="page" href="/BankingApp">Home</a></li>
 						<li class="nav-item"><a class="nav-link" href="about">About</a></li>
-						<li class="nav-item dropdown"><a
-							class="nav-link dropdown-toggle" href="#" role="button"
-							data-bs-toggle="dropdown" aria-expanded="false"> Login </a>
-							<ul class="dropdown-menu">
-
-								<li><a class="dropdown-item" href="customerLogin">Customer</a></li>
-								<li><a class="dropdown-item" href="AdminLoginPage">
-										Admin</a></li>
-								<li><hr class="dropdown-divider"></li>
-
-							</ul></li>
+						<li class="nav-item"><a class="nav-link" href="logout">Logout</a></li>
+						
 
 					</ul>
 				</div>
@@ -114,33 +63,8 @@ body {
 		</div>
 
 	</div>
-	<script>
-		document
-				.addEventListener(
-						"DOMContentLoaded",
-						function() {
-							var deleteAccountForm = document
-									.getElementById("deleteAccountForm");
-							var accountNumberInput = document
-									.getElementById("accountNumber");
-							var accountNumberError = document
-									.getElementById("accountNumberError");
-
-							deleteAccountForm
-									.addEventListener(
-											"submit",
-											function(event) {
-												var accountNumber = accountNumberInput.value;
-
-												if (accountNumber.trim() === "") {
-													accountNumberError.textContent = "Account Number is required.";
-													event.preventDefault();
-												} else {
-													accountNumberError.textContent = "";
-												}
-											});
-						});
-	</script>
+	<script type="text/javascript" src="<c:url value="/resources/javascript/deleteAccount.js" />"></script>
+	
 
 	<script
 		src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"

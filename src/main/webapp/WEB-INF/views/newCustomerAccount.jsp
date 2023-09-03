@@ -1,63 +1,22 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+
+<%@ page isELIgnored="false"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Create New Bank Account</title>
+<link rel="stylesheet" href="<c:url value='/resources/css/newCustomer.css' />">
+
+
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
 	integrity="sha384-pzjw6f+ua5mz72D9mCBaJPFmB9K0M4LCA6+M5x7GJh1PiIWX8f8V1ZI8Rzo0XaRd"
 	crossorigin="anonymous">
-<style>
-body {
-	background-color: #f8f9fa;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 100vh;
-	margin: 0;
-}
 
-.container {
-	background-color: #ffffff;
-	border-radius: 5px;
-	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-	padding: 30px;
-	width: 400px;
-	text-align: center;
-}
 
-.form-group {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	margin-bottom: 15px;
-}
-
-.form-group label {
-	font-weight: bold;
-	width: 130px;
-	margin-right: 10px;
-}
-
-.form-group input, .form-group select, .form-group textarea {
-	flex-grow: 1;
-}
-
-.btn-primary {
-	background-color: purple;
-	border-color: white;
-	width: 50%;
-	color: white;
-	border-radius: 5px;
-}
-
-.btn-primary:hover {
-	background-color: #0056b3;
-	border-color: #0056b3;
-}
-</style>
 </head>
 <body>
 	<div class="container">
@@ -97,50 +56,8 @@ body {
 			</form>
 		</div>
 	</div>
-	<script>
-		document
-				.getElementById("accountForm")
-				.addEventListener(
-						"submit",
-						function(event) {
-							var fullName = document.getElementById("fullName").value;
-							var address = document.getElementById("address").value;
-							var mobileNo = document.getElementById("mobileNo").value;
-							var email = document.getElementById("email").value;
-							var accountType = document
-									.getElementById("accountType").value;
-							var initialBalance = document
-									.getElementById("balance").value;
+	<script type="text/javascript" src="<c:url value='/resources/javascript/newCustomer.js' />"></script>
 
-							if (fullName.trim() === "" || address.trim() === ""
-									|| mobileNo.trim() === ""
-									|| email.trim() === ""
-									|| accountType.trim() === ""
-									|| initialBalance.trim() === "") {
-								alert("All fields are required.");
-								event.preventDefault(); 
-							}
-
-							if (mobileNo.trim() === "") {
-							    alert("Mobile No is required.");
-							    return false;
-							} else if (!/^\d{10}$/.test(mobileNo)) {
-							    alert("Mobile No must be exactly 10 digits.");
-							    return false;
-							}9
-
-							if (!/\S+@\S+\.\S+/.test(email)) {
-								alert("Enter a valid email address.");
-								event.preventDefault(); 
-							}
-
-							if (initialBalance.trim() === ""
-									|| parseFloat(initialBalance) <= 0) {
-								alert("Initial Balance is required and must be non-negative.");
-								event.preventDefault();
-							}
-						});
-	</script>
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
 		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
 		crossorigin="anonymous">

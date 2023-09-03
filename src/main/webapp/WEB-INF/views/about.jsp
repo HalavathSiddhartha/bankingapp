@@ -7,75 +7,14 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
 	rel="stylesheet"
 	integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
 	crossorigin="anonymous">
 <title>About the team</title>
- <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-
-        .navbar {
-            background-color: #343a40;
-        }
-
-        .navbar-brand {
-            color: #fff;
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        .navbar-nav .nav-link {
-            color: #fff;
-        }
-
-        .navbar-toggler-icon {
-            background-color: #fff;
-        }
-
-        .container {
-            margin-top: 20px;
-        }
-
-        h1 {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .card {
-            width: 20rem;
-            margin: 0 auto;
-        }
-
-        .card-img-top {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .card-title {
-            font-size: 18px;
-            font-weight: bold;
-            margin-top: 10px;
-        }
-
-        .card-body {
-            padding: 20px;
-        }
-        .card-img-top {
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .card-img-top:hover {
-            transform: scale(1.1);
-        }
-    </style>
+  <link href="<c:url value="/resources/css/about.css" />" rel="stylesheet">
 
 </head>
 <body>

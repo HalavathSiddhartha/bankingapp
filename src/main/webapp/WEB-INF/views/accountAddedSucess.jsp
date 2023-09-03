@@ -1,56 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@page isELIgnored="false"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <title>Account Creation Status</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-
-        .container {
-            background-color: #ffffff;
-            border-radius: 5px;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-            width: 400px;
-            text-align: center;
-        }
-
-        h1 {
-            margin-bottom: 20px;
-            color: #007bff;
-        }
-
-        h3 {
-            margin-bottom: 10px;
-            color: #333;
-        }
-
-        .details {
-            text-align: left;
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #f8f9fa;
-            border-radius: 5px;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .details h3 {
-            margin-bottom: 5px;
-            color: #333;
-        }
-    </style>
+    <link href="<c:url value="/resources/css/accountSuccess.css" />" rel="stylesheet">
 </head>
 <body>
     <div class="container">
