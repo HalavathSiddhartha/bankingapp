@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import bankingapp.dao.TransDao;
+import bankingapp.entity.Customer;
 import bankingapp.entity.Transcation;
 
 @Controller
@@ -23,9 +24,10 @@ public class AccountController {
 
 	@RequestMapping(path = "/add")
 	public String add(HttpSession session)
-
 	{
+		
 		session.getAttribute("user");
+		
 		return "addMoney";
 	}
 
@@ -48,8 +50,7 @@ public class AccountController {
 			m.addAttribute("balance", balance);
 			return "customerDashboard";
 
-		}
-		else if (balance == 0) {
+		} else if (balance == 0) {
 			m.addAttribute("message", "Your Account Has Been Closed");
 			rs = transdao.closeAccount(acc);
 
@@ -80,15 +81,19 @@ public class AccountController {
 //--------------------------------Add money---------------------------------
 	@RequestMapping(path = "/addtrans", method = RequestMethod.POST)
 	public String deposit(@RequestParam("accountNumber") int accountNumber,
-			@RequestParam("depositMoney") int depositMoney, Model m) {
-		// int accountBalance = transdao.checkBalance(accountNumber);
+			@RequestParam("depositMoney") int depositMoney, Model m, HttpSession session) {
 
 		try {
-			int result = transdao.addmoney(accountNumber, depositMoney);
-			int accountBalance = transdao.checkBalance(accountNumber);
-			m.addAttribute("balance", accountBalance);
-			if (result == 1) {
-				m.addAttribute("message", "Transaction successful");
+			int result = 0;
+			Customer cust = (Customer) session.getAttribute("user");
+			if (cust != null) {
+				result = transdao.addmoney(accountNumber, depositMoney);
+				if (result == 1) {
+					int accountBalance = transdao.checkBalance(accountNumber);
+					m.addAttribute("balance", accountBalance);
+					m.addAttribute("message", "Transaction successful");
+				}
+				
 				return "customerDashboard";
 			} else {
 				return "errorPage";
@@ -128,7 +133,7 @@ public class AccountController {
 				return "errorPage";
 			}
 		} catch (Exception e) {
-		
+
 			return "errorPage";
 		}
 	}

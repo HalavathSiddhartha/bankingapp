@@ -14,11 +14,7 @@
 	integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
 	crossorigin="anonymous">
 <title>Customer dashboard</title>
-<style>
-.balance {
-	color: green;
-}
-</style>
+
 </head>
 <body>
 	<nav
@@ -55,23 +51,17 @@
 			</div>
 		</div>
 		<div class="container m-4 p-4 d-flex justify-content-center">
-			<h2 class="balance">Remaining Balance : &#8377 ${balance}</h2>
+			<h2 class="balance text-success">Remaining Balance : &#8377 ${balance}</h2>
 		</div>
 		<p class="text-danger">${message}</p>
 	</div>
+
 	<%
+	response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1.
+	response.setHeader("Pragma", "no-cache"); // HTTP 1.0.
 	String acc = (String) request.getParameter("accountNumber");
 	%>
-	<%-- <div class="container m-4 p-4 d-flex justify-content-between">
-		<a class="navbar-brand " href="add">Add Money</a> <a
-			class="navbar-brand " href="withdraw">Withdraw Money</a> <a
-			class="navbar-brand " href="closeAccount?accountNumber=<%=acc%>">Close
-			Account</a>
-		<form action="viewtransactions" method="post">
-			<input type="hidden" name="accountNumber" value="<%=acc%>">
-			<button type="submit" class="navbar-brand">View Transactions</button>
-		</form>
-	</div> --%>
+	
 	<div class="container m-4 p-4 d-flex justify-content-between">
     <button class="btn btn-primary" onclick="window.location.href='add'">Add Money</button>
     <button class="btn btn-primary" onclick="window.location.href='withdraw'">Withdraw Money</button>

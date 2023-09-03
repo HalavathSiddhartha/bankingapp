@@ -71,7 +71,7 @@ public class CustomerController {
 			if (cust != null) {
 				return "customerDashboard";
 			} else {
-				return "redirect:customerLogin";
+				return "customerLogin";
 			}
 		} catch (Exception ex) {
 			ex.printStackTrace();
@@ -87,42 +87,44 @@ public class CustomerController {
 //	 -----------------Reset Password ---------------------
 
 	@RequestMapping(path = "/resetPassword", method = RequestMethod.POST)
-	public String forgetPassword(@RequestParam("accountNumber") String accountNumber,
-			@RequestParam("newPassword") String newPassword, @RequestParam("oldPassword") String oldPassword, Model m) {
-		try {
-			Customer cs = new Customer();
-
-			cs.setPassword(oldPassword);
-			cs.setAccountNumber(Integer.parseInt(accountNumber));
-			boolean val = userDao.valid(cs);
-			if (val == true) {
-
-				cs.setAccountNumber(Integer.parseInt(accountNumber));
-				cs.setPassword(newPassword);
-				int res = userDao.updatePass(cs);
-				return "customerLogin";
-			} else {
-				m.addAttribute("message", "Error.Old Password Must be Same .");
-				return "forgetPass";
-			}
-
-		} catch (Exception ex) {
-			ex.printStackTrace();
-			m.addAttribute("message", "An error occurred while processing your request.");
-			return "errorPage";
-		}
-	}
+    public String forgetPassword(@RequestParam("accountNumber") String accountNumber,
+                                 @RequestParam("newPassword") String newPassword,@RequestParam("oldPassword") String oldPassword,
+                                 Model m) {
+        try {
+            Customer cs = new Customer();
+            
+            
+            cs.setPassword(oldPassword);
+            cs.setAccountNumber(Integer.parseInt(accountNumber));
+          boolean val=  userDao.valid(cs);   
+            if ( val==true) {
+            	
+            	 cs.setAccountNumber(Integer.parseInt(accountNumber));
+            	 cs.setPassword(newPassword);
+            	 int res = userDao.updatePass(cs);
+                return "customerLogin";
+            } else {
+                m.addAttribute("message", "Error.Old Password Must be Same .");
+                return "forgetPass";
+            }
+            
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            m.addAttribute("message", "An error occurred while processing your request.");
+            return "errorPage";
+        }
+    }
 
 	// --------------Logout--------------------
 	@GetMapping("/customerlogout")
-	public String processLogout(HttpSession session, Model attr) {
-		try {
-			session.invalidate();
-			attr.addAttribute("result", "Logged out successfully");
-			return "customerLogin";
-		} catch (Exception ex) {
-			ex.printStackTrace();
-			return "errorPage";
-		}
-	}
+    public String processLogout(HttpSession session, Model attr) {
+        try {
+            session.invalidate();
+            attr.addAttribute("result", "Logged out successfully");
+            return "customerLogin";
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            return "errorPage";
+        }
+    }
 }
