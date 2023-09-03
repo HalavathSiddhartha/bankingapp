@@ -14,7 +14,6 @@
 	integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
 	crossorigin="anonymous">
 <title>Customer dashboard</title>
-
 </head>
 <body>
 	<nav
@@ -33,10 +32,9 @@
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 						<li class="nav-item"><a class="nav-link active"
 							aria-current="page" href="homePage">Home</a></li>
-					
+
 						<li class="nav-item"><a class="nav-link"
 							href="customerlogout">Logout</a></li>
-						
 					</ul>
 				</div>
 			</div>
@@ -51,7 +49,8 @@
 			</div>
 		</div>
 		<div class="container m-4 p-4 d-flex justify-content-center">
-			<h2 class="balance text-success">Remaining Balance : &#8377 ${balance}</h2>
+			<h2 class="balance text-success">Remaining Balance : &#8377
+				${balance}</h2>
 		</div>
 		<p class="text-danger">${message}</p>
 	</div>
@@ -61,19 +60,23 @@
 	response.setHeader("Pragma", "no-cache"); // HTTP 1.0.
 	String acc = (String) request.getParameter("accountNumber");
 	%>
-	
+
 	<div class="container m-4 p-4 d-flex justify-content-between">
-    <button class="btn btn-primary" onclick="window.location.href='add'">Add Money</button>
-    <button class="btn btn-primary" onclick="window.location.href='withdraw'">Withdraw Money</button>
-    <button class="btn btn-primary" onclick="window.location.href='closeAccount?accountNumber=<%=acc%>'">Close Account</button>
-    <form action="viewtransactions" method="post">
-        <input type="hidden" name="accountNumber" value="<%=acc%>">
-        <div class="d-flex justify-content-center">
-            <button type="submit" class="btn btn-primary">View Transactions</button>
-        </div>
-    </form>
-</div>
-	
+		<button class="btn btn-primary" onclick="window.location.href='add'">Add
+			Money</button>
+		<button class="btn btn-primary"
+			onclick="window.location.href='withdraw'">Withdraw Money</button>
+		<button class="btn btn-primary"
+			onclick="window.location.href='closeAccount?accountNumber=<%=acc%>'">Close
+			Account</button>
+		<form action="viewtransactions" method="post">
+			<input type="hidden" name="accountNumber" value="<%=acc%>">
+			<div class="d-flex justify-content-center">
+				<button type="submit" class="btn btn-primary">View
+					Transactions</button>
+			</div>
+		</form>
+	</div>
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"

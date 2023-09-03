@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 
 <%@ page isELIgnored="false"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <!DOCTYPE html>
 <html>
@@ -14,10 +14,10 @@
 	rel="stylesheet"
 	integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
 	crossorigin="anonymous">
-<link href="<c:url value="/resources/css/deleteAccount.css" />" rel="stylesheet">
+<link href="<c:url value="/resources/css/deleteAccount.css" />"
+	rel="stylesheet">
 </head>
 <body>
-
 	<nav
 		class="navbar navbar-expand-lg bg-body-tertiary navbar bg-dark border-bottom border-body"
 		data-bs-theme="dark">
@@ -36,16 +36,11 @@
 							aria-current="page" href="/BankingApp">Home</a></li>
 						<li class="nav-item"><a class="nav-link" href="about">About</a></li>
 						<li class="nav-item"><a class="nav-link" href="logout">Logout</a></li>
-						
-
 					</ul>
 				</div>
 			</div>
-
 		</div>
 	</nav>
-<body>
-
 	<div class="container">
 		<div class="form-container">
 			<h3 class="mb-4 text-center">Delete Bank Account</h3>
@@ -63,9 +58,8 @@
 		</div>
 
 	</div>
-	<script type="text/javascript" src="<c:url value="/resources/javascript/deleteAccount.js" />"></script>
-	
-
+	<script type="text/javascript"
+		src="<c:url value="/resources/javascript/deleteAccount.js" />"></script>
 	<script
 		src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
 		integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"

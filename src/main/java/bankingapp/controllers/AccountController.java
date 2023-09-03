@@ -143,7 +143,7 @@ public class AccountController {
 	@RequestMapping(value = "/downloadTransactions", method = RequestMethod.GET)
 	public void downloadTable(@RequestParam("accountNumber") int accountNumber, HttpServletResponse response)
 			throws IOException {
-		// System.out.println(accountNumber);
+		
 		List<Transcation> transactions = transdao.getColumnNames(accountNumber);
 
 		response.setContentType("text/plain");
@@ -158,7 +158,7 @@ public class AccountController {
 				writer.print("Transaction Date : " + transaction.getTransType() + "\t");
 				writer.print("Remaining Balance: " + transaction.getBalance() + "\t");
 
-				// Add other transaction details
+				
 				writer.println();
 			}
 		}

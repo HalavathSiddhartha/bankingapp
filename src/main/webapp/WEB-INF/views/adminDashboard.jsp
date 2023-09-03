@@ -12,7 +12,6 @@
 	<div id="header">
 		<h2>Admin Dashboard - Bank Account Management</h2>
 	</div>
-
 	<div id="container">
 		<div class="dashboard-title">Welcome Back !</div>
 		<ul class="menu">
@@ -26,10 +25,6 @@
 					Bank Account</a></li>
 			<li class="menu-item"><a class="menu-link" href="logout">Logout</a></li>
 		</ul>
-
-
-
 	</div>
-
 </body>
 </html>

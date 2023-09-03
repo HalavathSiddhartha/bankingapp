@@ -9,14 +9,10 @@
 <meta charset="UTF-8">
 <title>Create New Bank Account</title>
 <link rel="stylesheet" href="<c:url value='/resources/css/newCustomer.css' />">
-
-
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
 	integrity="sha384-pzjw6f+ua5mz72D9mCBaJPFmB9K0M4LCA6+M5x7GJh1PiIWX8f8V1ZI8Rzo0XaRd"
 	crossorigin="anonymous">
-
-
 </head>
 <body>
 	<div class="container">

@@ -35,18 +35,13 @@
 							class="nav-link dropdown-toggle" href="#" role="button"
 							data-bs-toggle="dropdown" aria-expanded="false"> Login </a>
 							<ul class="dropdown-menu">
-
-								
 								<li><a class="dropdown-item" href="adminLoginPage">
 										Admin</a></li>
 								<li><hr class="dropdown-divider"></li>
-
 							</ul></li>
-
 					</ul>
 				</div>
 			</div>
-
 		</div>
 	</nav>
 	<div class="container mx-auto p-4" style="max-width: 500px;">
@@ -71,8 +66,6 @@
 			</div>
 		</form>
 	</div>
-	
-	
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"

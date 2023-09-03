@@ -32,13 +32,9 @@ public class TransDaoimpl implements TransDao {
 				+ "VALUES (?, NOW(), ?, 'Deposit', (SELECT balance FROM account WHERE accountNumber = ?))";
 		int res;
 		try {
-			// Update account balance
 			res = this.jdbcTemplate.update(updateBalance, depositAmount, accountNumber);
-
-			// Insert transaction record
 			res = this.jdbcTemplate.update(insertTransactionSql, accountNumber, depositAmount, accountNumber);
 		} catch (Exception e) {
-			// Handle exceptions
 			throw new RuntimeException("Error depositing money", e);
 		}
 		return res;

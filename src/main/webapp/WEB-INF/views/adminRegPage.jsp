@@ -13,12 +13,8 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
 	integrity="sha384-pzjw6f+ua5mz72D9mCBaJPFmB9K0M4LCA6+M5x7GJh1PiIWX8f8V1ZI8Rzo0XaRd"
 	crossorigin="anonymous">
-	
-
 </head>
 <body>
-
-
 	<div class="container">
 		<div class="form-container">
 			<h3 class="mb-4 text-center">Admin Registration</h3>
@@ -40,15 +36,12 @@
 						type="password" class="form-control" id="confirmPassword"
 						name="confirmPassword">
 				</div>
-
 				<button type="submit" class="btn btn-primary" id="submitBtn">Create
 					Account</button>
 			</form>
 		</div>
 		<div class="error-message">${message}</div>
 	</div>
-
-
 <script type="text/javascript" src="<c:url value="/resources/javascript/adminReg.js" />"></script>
 
 

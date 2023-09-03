@@ -3,7 +3,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -50,8 +49,6 @@ th {
 		%>
 		<a href="downloadTransactions?accountNumber=<%=acc%>">Download
 			Transaction Table</a>
-		<!-- <a href="customerDashboard">Return to Dashboard</a>
- -->
 		<h1>List of Transactions</h1>
 
 		<table border="1">
@@ -63,7 +60,6 @@ th {
 				<th>Transaction Amount</th>
 				<th>Remaining balance</th>
 			</tr>
-
 			<%
 			int transactionCounter = 1; // Initialize the transaction counter
 			for (Transcation transaction : listo) {
@@ -77,16 +73,13 @@ th {
 				<td><%=transaction.getBalance()%></td>
 			</tr>
 			<%
-			transactionCounter++; // Increment the transaction counter for each iteration
+			transactionCounter++; 
 			}
 			%>
 
 		</table>
 	</div>
 	<div class="container m-5"></div>
-	<!-- <div class="container">
-		<a href="backtocustomerDash" class="btn btn-primary">Back</a>
-	</div> -->
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"

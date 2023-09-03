@@ -13,32 +13,22 @@
 	href="./images/favicon-32x32.png">
 <link rel="stylesheet"
 	href="<c:url value="/resources/css/homepage.css"/>">
-
 <title>The Nagaland Bank</title>
-
-
 </head>
-
 <body>
-
 	<div class="container">
 		<div class="header">
 			<div class="topHeader">
-
 				<img src="<c:url value="/resources/images/Logo.png"/>"
 					alt="the nagaland bank logo">
-
 				<nav class="navigation">
 					<ul>
 						<li><a class="navLink" href="#">Home</a></li>
 						<li><a class="navLink" href="about">About</a></li>
 						<li><a class="navLink" href="adminLoginPage">Admin Login</a></li>
-
 					</ul>
 				</nav>
-
 				<button id="requestBtn">Customer Login</button>
-
 				<span id="btn" class="navToggler"> <svg
 						xmlns="http://www.w3.org/2000/svg" width="24" height="11"
 						id="show" class="display">
@@ -55,8 +45,6 @@
 				</span>
 			</div>
 		</div>
-
-		
 		<div class="digitalBanking">
 			<div class="dgtBankInfo">
 				<h1>The Nagaland Bank Welcomes You !</h1>
@@ -77,7 +65,6 @@
 					alt="image-mockups">
 			</div>
 		</div>
-
 		<div class="footer">
 			<div class="footerList">
 				<div class="footerDiv">
@@ -89,7 +76,6 @@
 				</div>
 			</div>
 		</div>
-
 		<script src="script.js"></script>
 	</div>
 </body>

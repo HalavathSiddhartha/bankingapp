@@ -13,7 +13,6 @@
     <div class="container">
         <h1>Account Creation Status</h1>
         <p>Welcome, Dear <strong>${fullName}</strong>! Your account creation was successful.</p>
-
         <div class="details">
             <h3>Account Details:</h3>
             <p><strong>Name:</strong> ${fullName}</p>
@@ -24,8 +23,6 @@
             <p><strong>Initial Balance:</strong> ₹${balance}</p>
             <p><strong>Account Number:</strong>${acc }
             <p><strong>Password:</strong> ${password}</p>
-            
-   
         </div>
     </div>
 </body>
