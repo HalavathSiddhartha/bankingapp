@@ -89,7 +89,7 @@ body {
 	</div>
 
 	<div id="container">
-		<div class="dashboard-title">Welcome back, Bank ${username }!</div>
+		<div class="dashboard-title">Welcome Back !</div>
 		<ul class="menu">
 			<li class="menu-item"><a class="menu-link"
 				href="newCustomerAccount">Create New Bank Account</a></li>
