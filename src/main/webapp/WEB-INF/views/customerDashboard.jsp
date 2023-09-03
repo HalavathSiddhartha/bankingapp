@@ -37,19 +37,10 @@
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 						<li class="nav-item"><a class="nav-link active"
 							aria-current="page" href="homePage">Home</a></li>
-						<!-- <li class="nav-item"><a class="nav-link" href="about">About</a></li> -->
+					
 						<li class="nav-item"><a class="nav-link"
 							href="customerlogout">Logout</a></li>
-						<!-- <li class="nav-item dropdown"><a
-							class="nav-link dropdown-toggle" href="adminLoginPage"
-							role="button" data-bs-toggle="dropdown" aria-expanded="false">
-								Login </a>
-							<ul class="dropdown-menu">
-								<li><a class="dropdown-item" href="customerLogin">Customer</a></li>
-								<li><a class="dropdown-item" href="AdminLoginPage">
-										Admin</a></li>
-								<li><hr class="dropdown-divider"></li>
-							</ul></li> -->
+						
 					</ul>
 				</div>
 			</div>
@@ -71,7 +62,7 @@
 	<%
 	String acc = (String) request.getParameter("accountNumber");
 	%>
-	<div class="container m-4 p-4 d-flex justify-content-between">
+	<%-- <div class="container m-4 p-4 d-flex justify-content-between">
 		<a class="navbar-brand " href="add">Add Money</a> <a
 			class="navbar-brand " href="withdraw">Withdraw Money</a> <a
 			class="navbar-brand " href="closeAccount?accountNumber=<%=acc%>">Close
@@ -80,18 +71,24 @@
 			<input type="hidden" name="accountNumber" value="<%=acc%>">
 			<button type="submit" class="navbar-brand">View Transactions</button>
 		</form>
-	</div>
+	</div> --%>
+	<div class="container m-4 p-4 d-flex justify-content-between">
+    <button class="btn btn-primary" onclick="window.location.href='add'">Add Money</button>
+    <button class="btn btn-primary" onclick="window.location.href='withdraw'">Withdraw Money</button>
+    <button class="btn btn-primary" onclick="window.location.href='closeAccount?accountNumber=<%=acc%>'">Close Account</button>
+    <form action="viewtransactions" method="post">
+        <input type="hidden" name="accountNumber" value="<%=acc%>">
+        <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-primary">View Transactions</button>
+        </div>
+    </form>
+</div>
+	
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
 		crossorigin="anonymous">
-		function refreshPage() {
-			location.reload();
-		}
-
-		const refreshInterval = 5000;
-
-		setTimeout(refreshPage, refreshInterval);
+		
 	</script>
 </body>
 
