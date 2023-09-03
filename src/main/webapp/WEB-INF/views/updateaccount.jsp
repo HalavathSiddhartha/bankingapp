@@ -2,21 +2,20 @@
 	pageEncoding="UTF-8"%>
 
 <%@ page isELIgnored="false"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Update Customer Account</title>
-<link href="<c:url value="/resources/css/updateAccount.css" />" rel="stylesheet">
+<link href="<c:url value="/resources/css/updateAccount.css" />"
+	rel="stylesheet">
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
 	integrity="sha384-pzjw6f+ua5mz72D9mCBaJPFmB9K0M4LCA6+M5x7GJh1PiIWX8f8V1ZI8Rzo0XaRd"
 	crossorigin="anonymous">
-
 </head>
 <body>
-
 	<div class="container">
 		<div class="form-container">
 			<h3 class="mb-4 text-center">Update Customer Account</h3>
@@ -46,12 +45,11 @@
 				<button type="submit" class="btn btn-primary">Update
 					Account</button>
 			</form>
-
 			<div class="error-message">${message}</div>
 		</div>
 	</div>
-	<script type="text/javascript" src="<c:url value='/resources/javascript/updateAcc.js' />"></script>
-	
+	<script type="text/javascript"
+		src="<c:url value='/resources/javascript/updateAcc.js' />"></script>
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
 		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
 		crossorigin="anonymous"></script>
