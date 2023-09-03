@@ -1,0 +1,45 @@
+@charset "ISO-8859-1";
+body {
+	background-color: #f8f9fa;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	flex-direction: column;
+	align-items: center;
+	height: 100vh;
+}
+
+.form-container {
+	background-color: #ffffff;
+	border-radius: 5px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+	padding: 30px;
+	width: 400px;
+}
+
+.form-group label {
+	font-weight: bold;
+}
+
+.btn-danger {
+	background-color: purple;
+	color: white;
+	border-color: white;
+	width: 50%;
+	border-radius: 5px;
+}
+
+.btn-danger:hover {
+	background-color: #0056b3;
+	border-color: #bd2130;
+}
+
+.error-message {
+	color: #dc3545;
+	font-weight: bold;
+	margin-top: 10px;
+}
