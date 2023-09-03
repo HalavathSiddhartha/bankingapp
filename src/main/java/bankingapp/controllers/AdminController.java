@@ -285,7 +285,7 @@ public class AdminController {
 
 	public String processLogout(HttpSession session, Model model) {
 		session.invalidate();
-		model.addAttribute("message", "Logged out successfull");
+		model.addAttribute("message", "Logout successfull");
 		return "adminLoginPage";
 	}
 	
