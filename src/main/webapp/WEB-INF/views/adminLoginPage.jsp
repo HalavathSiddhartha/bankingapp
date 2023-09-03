@@ -1,4 +1,3 @@
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@page isELIgnored="false"%>
@@ -28,6 +27,7 @@ body {
 	padding: 30px;
 	width: 400px;
 	text-align: center;
+	font-size: 20px;
 }
 
 .form-group {
@@ -41,10 +41,12 @@ body {
 	font-weight: bold;
 	width: 130px;
 	margin-right: 10px;
+	font-size: 18px;
 }
 
 .form-group input, .form-group select, .form-group textarea {
 	flex-grow: 1;
+	font-size: 18px;
 }
 
 .btn-primary {
@@ -53,17 +55,22 @@ body {
 	width: 50%;
 	color: white;
 	border-radius: 5px;
+	font-size: 18px;
 }
 
-.btn-primary:hover {
+.btn.btn-outline-primary {
+	text-decoration: none; .
+	btn-primary: hover{ 
 	background-color: #0056b3;
 	border-color: #0056b3;
 }
 
 .error-message {
-	color: #dc3545;
+	color: red;
 	font-weight: bold;
 	margin-top: 10px;
+	font-size: 18px;
+}
 }
 </style>
 </head>
@@ -81,20 +88,15 @@ body {
 			<div class="form-group">
 				<label for="passwordInput">Password</label> <input type="password"
 					class="form-control" id="passwordInput" placeholder="Password"
-					name="password">
-				<!-- <div class="input-group-append">
-						<button class="btn btn-outline-primary toggle-password"
-							type="button">Show</button>
-					</div> -->
-				<small id="passwordError" class="form-text text-danger"></small>
+					name="password"> <small id="passwordError"
+					class="form-text text-danger"></small>
 			</div>
 			<div class="text-center">
 				<button type="submit" class="btn btn-primary">Login</button>
-
-
 			</div>
 			<p class="mt-3">
-				<a href="adminRegPage" class="btn btn-outline-primary">New admin</a>
+				<a href="adminRegPage" class="btn btn-outline-primary">New admin
+					Registration</a>
 			</p>
 		</form>
 		<div class="error-message">${message}</div>
@@ -153,8 +155,3 @@ body {
 		crossorigin="anonymous"></script>
 </body>
 </html>
-
-
-
-
-
