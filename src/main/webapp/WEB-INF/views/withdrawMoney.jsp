@@ -25,14 +25,20 @@
 			<div class="mb-3">
 				<label for="exampleInputEmail1" class="form-label">Account
 					Number</label> <input type="text" class="form-control"
-					id="exampleInputEmail1" aria-describedby="emailHelp"
+					
 					name="accountNumber" value="<%=cust.getAccountNumber()%>">
 			</div>
-			<div class="mb-3">
+			<!-- <div class="mb-3">
 				<label for="exampleInputPassword1" class="form-label">Amount</label>
-				<input type="text" class="form-control" id="exampleInputPassword1"
+				<input type="text" class="form-control" 
 					name="withdrawMoney" required>
-			</div>
+			</div> -->
+			<div class="mb-3">
+                <label for="inputAmount" class="form-label">Amount</label>
+                <input type="text" class="form-control" name="withdrawMoney" required pattern="^[1-9]\d*$">
+                <!-- Add pattern attribute for positive values -->
+                <small class="form-text text-muted">Please enter a positive number.</small>
+            </div>
 			<div class="d-flex justify-content-center">
 				<button type="submit" class="btn btn-primary">Confirm</button>
 			</div>
