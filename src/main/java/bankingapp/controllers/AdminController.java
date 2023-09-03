@@ -1,4 +1,4 @@
-package bankingapp.controllers;
+	package bankingapp.controllers;
 
 import java.security.SecureRandom;
 import java.util.List;
@@ -287,6 +287,11 @@ public class AdminController {
 		session.invalidate();
 		model.addAttribute("message", "Logged out successfull");
 		return "adminLoginPage";
+	}
+	
+	@GetMapping("/backtoadmin")
+	public String backtoadmin() {
+		return "adminDashboard";
 	}
 
 }

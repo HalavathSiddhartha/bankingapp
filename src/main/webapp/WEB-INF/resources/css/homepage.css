@@ -196,9 +196,8 @@ body {
 
 
 .footerDiv {
-	/* align-self: stretch; */
+
 	display: flex;
-	/* flex-flow: row nowrap; */
 	justify-content: center;
 	align-items: center;
 }

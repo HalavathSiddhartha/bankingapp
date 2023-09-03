@@ -39,36 +39,7 @@ th {
 		data-bs-theme="dark">
 		<div class="container-fluid m-4 px-5">
 			<a class="navbar-brand " href="homePage">The Nagaland Bank</a>
-			<!-- <div class="text-center  ">
-				<button class="navbar-toggler" type="button"
-					data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-					aria-controls="navbarSupportedContent" aria-expanded="false"
-					aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-						<li class="nav-item"><a class="nav-link active"
-							aria-current="page" href="/BankingApp">Home</a></li>
-						<li class="nav-item"><a class="nav-link" href="about">About</a></li>
-						<li class="nav-item"><a class="nav-link" href="logout">Logout</a></li>
-						<li class="nav-item dropdown"><a
-							class="nav-link dropdown-toggle" href="#" role="button"
-							data-bs-toggle="dropdown" aria-expanded="false"> Login </a>
-							<ul class="dropdown-menu">
-
-								<li><a class="dropdown-item" href="customerLogin">Customer</a></li>
-								<li><a class="dropdown-item" href="AdminLoginPage">
-										Admin</a></li>
-								<li><hr class="dropdown-divider"></li>
-
-							</ul></li>
-
-					</ul>
-				</div>
-			</div>-->
-
-		</div> 
+		</div>
 	</nav>
 	<%
 	List<Transcation> listo = (List) request.getAttribute("transactions");
@@ -78,7 +49,8 @@ th {
 		String acc = (String) request.getParameter("accountNumber");
 		%>
 		<a href="downloadTransactions?accountNumber=<%=acc%>">Download
-			Transaction Table</a> <!-- <a href="customerDashboard">Return to Dashboard</a>
+			Transaction Table</a>
+		<!-- <a href="customerDashboard">Return to Dashboard</a>
  -->
 		<h1>List of Transactions</h1>
 
@@ -112,6 +84,9 @@ th {
 		</table>
 	</div>
 	<div class="container m-5"></div>
+	<!-- <div class="container">
+		<a href="backtocustomerDash" class="btn btn-primary">Back</a>
+	</div> -->
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
