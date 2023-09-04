@@ -21,9 +21,16 @@
             <p><strong>Email:</strong> ${email}</p>
             <p><strong>Account Type:</strong> ${accountType}</p>
             <p><strong>Initial Balance:</strong> ₹${balance}</p>
-            <p><strong>Account Number:</strong>${acc }
+            <p><strong>Account Number:</strong> ${acc}</p>
             <p><strong>Password:</strong> ${password}</p>
         </div>
+        
+        
+    <a href="backtoadmin" class="btn btn-primary" style="margin: 20px;">Back</a>
+
+        
+    
     </div>
+    
 </body>
 </html>

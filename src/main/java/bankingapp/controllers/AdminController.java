@@ -1,4 +1,4 @@
-	package bankingapp.controllers;
+package bankingapp.controllers;
 
 import java.security.SecureRandom;
 import java.util.List;
@@ -66,6 +66,7 @@ public class AdminController {
 		return "adminRegPage";
 	}
 
+	@PostMapping("/register")
 	public String register(@ModelAttribute("Admin") Admin admin, Model model, HttpServletRequest request) {
 		try {
 			int result = adminLoginDao.registerAdmin(admin);
@@ -128,7 +129,7 @@ public class AdminController {
 			}
 
 			String chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()";
-			StringBuilder password = new StringBuilder(10); 
+			StringBuilder password = new StringBuilder(10);
 			SecureRandom random = new SecureRandom();
 			for (int i = 0; i < 10; i++) {
 				int randomIndex = random.nextInt(chars.length());
@@ -282,13 +283,18 @@ public class AdminController {
 	// Method---------------------------
 
 	@GetMapping("/logout")
+	public String processLogout(HttpSession session, Model attr) {
+		try {
+			session.invalidate();
+			attr.addAttribute("message", "Logged out successfully");
+			return "adminLoginPage";
+		} catch (Exception ex) {
+			ex.printStackTrace();
+			return "errorPage";
+		}
 
-	public String processLogout(HttpSession session, Model model) {
-		session.invalidate();
-		model.addAttribute("message", "Logout successfull");
-		return "adminLoginPage";
 	}
-	
+
 	@GetMapping("/backtoadmin")
 	public String backtoadmin() {
 		return "adminDashboard";

@@ -18,6 +18,9 @@
             width: 400px;
             text-align: center;
         }
+        button{
+			margin: 10px;
+		}
 
         h1 {
             margin-bottom: 20px;
