@@ -34,10 +34,14 @@ public class AdminController {
 	 * AdminLoginDao An autowired should be done to establish the connection b/w dao
 	 * layer and controller
 	 */
+	private final AdminLoginDao adminLoginDao;
+	private final NewAccountDao account;
+
 	@Autowired
-	AdminLoginDao adminLoginDao;
-	@Autowired
-	NewAccountDao account;
+	public AdminController(AdminLoginDao adminLoginDao, NewAccountDao account) {
+		this.adminLoginDao = adminLoginDao;
+		this.account = account;
+	}
 
 	// ----------------------------------HomePage---------------------------
 	@RequestMapping("/")
@@ -89,18 +93,16 @@ public class AdminController {
 
 	@PostMapping("/adminLoginProcess")
 	public String checkAdmin(@RequestParam("username") String username, @RequestParam("password") String password,
-			Model model, HttpServletRequest rs) {
+			Model model, HttpServletRequest request) {
 		try {
 			boolean loginFlag = adminLoginDao.validateAdmin(username, password);
 			model.addAttribute("username", username);
 			model.addAttribute("password", password);
 			if (loginFlag) {
-				model.addAttribute("message", "Invalid credentials !!");
-				HttpSession session = rs.getSession();
-				session.setAttribute("username", adminLoginDao);
+				model.addAttribute("message", "Login successful");
 				return "adminDashboard";
 			} else {
-				model.addAttribute("message", "Can't find credentials");
+				model.addAttribute("message", "Invalid credentials");
 				return "adminLoginPage";
 			}
 		} catch (DataAccessException ex) {

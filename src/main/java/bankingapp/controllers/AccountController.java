@@ -21,14 +21,14 @@ import bankingapp.entity.Transcation;
 @Controller
 public class AccountController {
 	@Autowired
-	TransDao transdao;
+
+	public TransDao transdao;
 
 	@RequestMapping(path = "/add")
-	public String add(HttpSession session)
-	{
-		
+	public String add(HttpSession session) {
+
 		session.getAttribute("user");
-		
+
 		return "addMoney";
 	}
 
@@ -94,7 +94,7 @@ public class AccountController {
 					m.addAttribute("balance", accountBalance);
 					m.addAttribute("message", "Transaction successful");
 				}
-				
+
 				return "customerDashboard";
 			} else {
 				return "errorPage";
@@ -143,7 +143,7 @@ public class AccountController {
 	@RequestMapping(value = "/downloadTransactions", method = RequestMethod.GET)
 	public void downloadTable(@RequestParam("accountNumber") int accountNumber, HttpServletResponse response)
 			throws IOException {
-		
+
 		List<Transcation> transactions = transdao.getColumnNames(accountNumber);
 
 		response.setContentType("text/plain");
@@ -158,7 +158,6 @@ public class AccountController {
 				writer.print("Transaction Date : " + transaction.getTransType() + "\t");
 				writer.print("Remaining Balance: " + transaction.getBalance() + "\t");
 
-				
 				writer.println();
 			}
 		}
