@@ -36,7 +36,7 @@ public class CustomerController {
 	@RequestMapping(path = "/custvalid", method = RequestMethod.POST)
 	public String getdataForm(@RequestParam("accountNumber") int accountNumber,
 			@RequestParam("password") String password, Model m, HttpServletRequest rs) {
-		try {
+//		try {
 			Customer cust = new Customer();
 			cust.setPassword(password);
 			cust.setAccountNumber(accountNumber);
@@ -56,16 +56,16 @@ public class CustomerController {
 				m.addAttribute("message", "Invalid Credential");
 				return "customerLogin";
 			}
-		} catch (Exception ex) {
-			ex.printStackTrace();
-			m.addAttribute("message", "An error occurred while processing your request.");
-			return "errorPage";
-		}
+//		} catch (Exception ex) {
+//			ex.printStackTrace();
+//			m.addAttribute("message", "An error occurred while processing your request.");
+//			return "errorPage";
+//		}
 	}
 
 	@RequestMapping(path = "/customerDashboard")
 	public String customerDashboard(HttpSession session) {
-		try {
+//		try {
 			int balance = (Integer) session.getAttribute("balance");
 			Customer cust = (Customer) session.getAttribute("user");
 			if (cust != null) {
@@ -73,10 +73,10 @@ public class CustomerController {
 			} else {
 				return "customerLogin";
 			}
-		} catch (Exception ex) {
-			ex.printStackTrace();
-			return "errorPage";
-		}
+//		} catch (Exception ex) {
+//			ex.printStackTrace();
+//			return "errorPage";
+//		}
 	}
 
 	@RequestMapping("/forgetPassword")
@@ -90,7 +90,7 @@ public class CustomerController {
     public String forgetPassword(@RequestParam("accountNumber") String accountNumber,
                                  @RequestParam("newPassword") String newPassword,@RequestParam("oldPassword") String oldPassword,
                                  Model m) {
-        try {
+//        try {
             Customer cs = new Customer();
             
             
@@ -108,23 +108,23 @@ public class CustomerController {
                 return "forgetPass";
             }
             
-        } catch (Exception ex) {
-            ex.printStackTrace();
-            m.addAttribute("message", "An error occurred while processing your request.");
-            return "errorPage";
-        }
+//        } catch (Exception ex) {
+//            ex.printStackTrace();
+//            m.addAttribute("message", "An error occurred while processing your request.");
+//            return "errorPage";
+//        }
     }
 
 	// --------------Logout--------------------
 	@GetMapping("/customerlogout")
     public String processLogout(HttpSession session, Model attr) {
-        try {
+//        try {
             session.invalidate();
             attr.addAttribute("result", "Logged out successfully");
             return "customerLogin";
-        } catch (Exception ex) {
-            ex.printStackTrace();
-            return "errorPage";
-        }
+//        } catch (Exception ex) {
+//            ex.printStackTrace();
+//            return "errorPage";
+//        }
     }
 }

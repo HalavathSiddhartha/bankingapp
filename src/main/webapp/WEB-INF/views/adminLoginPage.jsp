@@ -37,9 +37,11 @@
 			<p class="mt-3">
 				<a href="adminRegPage" class="btn btn-outline-primary">New admin
 					Registration</a>
-			</p>
+						</p>
 		</form>
 		<div class="error-message">${message}</div>
+		<a href="/bankingapp" class="btn btn-outline-primary" style="margin: 20px;">Back to Home Page</a>
+		
 	</div>
 	<script type="text/javascript"
 		src="<c:url value="/resources/javascript/adminLogin.js" />"></script>
